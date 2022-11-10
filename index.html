@@ -1,0 +1,125 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Mi primera web</title>
+    </head>
+    <body>
+        <table style="border: 1px solid rgb(13, 11, 174)">
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <td>Curso Demo</td>
+                <td>Gratis</td>
+            </tr>
+            <tr>
+                <td>Curso Completo</td>
+                <td>19,90$</td>
+            </tr>
+            <tr>
+                <td>Curso Premium</td>
+                <td>29,90$</td>
+            </tr>
+        </table>
+        <!-- ul es lista no ordenada-->
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+        </ul>
+        <!-- ol es lista ordenada-->
+        <ol>
+            <li value="50">Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>
+                <ol>
+                    <li style="list-style-type: lower-greek;">sub elemento 1</li>
+                    <li style="list-style-type: lower-greek;">sub elemento 2</li>
+                    <li style="list-style-type: lower-greek;">sub elemento 3</li>
+                    <li style="list-style-type: lower-greek;">sub elemento 4</li>
+                </ol>
+            </li>
+        </ol>
+        <!--La diferencia entre usar el method POST o GET es que
+            https://youtu.be/BdaQ55-JlPg    
+
+        Con el método GET, los datos que se envían al servidor se escriben en la misma dirección URL.
+       -Desventajas de GET:
+        -Su débil protección de datos: Los parámetros URL que se envían quedan visibles en la barra de 
+        direcciones del navegador y son accesibles sin clave en el historial de navegación, en el caché 
+        y en el log de los servidores.
+        -Otra desventaja es que su capacidad es limitada: dependiendo del servidor y del navegador, no es
+        posible introducir más de 2000 caracteres. Además, los parámetros URL solo pueden contener caracteres 
+        ASCII (letras, números, signos, etc.) y no datos binarios como archivos de audio o imágenes.
+
+        El método POST introduce los parámetros en la solicitud HTTP para el servidor. Por ello, no quedan 
+        visibles para el usuario. Además, la capacidad del método POST es ilimitada.
+       -Ventajas de POST
+        En lo relativo a los datos, como, por ejemplo, al rellenar formularios con nombres de usuario y contraseñas, 
+        el método POST ofrece mucha discreción. Los datos no se muestran en el caché ni tampoco en el historial de 
+        navegación. La flexibilidad del método POST también resulta muy útil: no solo se pueden enviar textos cortos, 
+        sino también otros tipos de información, como fotos o vídeos.
+       -Desventajas de POST
+        Cuando una página web que contiene un formulario se actualiza (por ejemplo, cuando se retrocede a la página anterior) 
+        los datos del formulario debentransferirse de nuevo (puede que alguna vez hayas recibido una de estas advertencias). 
+        Por este motivo, existe el riesgo de que los datos se envíen varias veces por error, lo que, en el caso de una tienda 
+        nline, puede dar lugar a pedidos duplicados. No obstante, las webs modernas de las tiendas suelen estar preparadas para 
+        evitar este tipo de problemas.-->
+        <form action="/formulario" method="POST">
+            <!--El type es el tipo de entrada que podemos recibir por medio del formulario
+            estos pueden ser (sino se especifica el type, por defecto será "text"):
+            -text
+            -email
+            -password
+            -radio
+            -checkbox
+            -file
+            -->
+            <!--name indica el nombre de la key que contendrá por ejemplo el nombre, apellido o comentario dentro 
+            de nuestro formulario, esto es importante para distinguir ya que funciona como para darle un nombre a 
+            cada variable en este caso.-->
+            <label for="nombre">Nombre</label>
+            <input type="text"id="nombre" name="nombre" placeholder="Escriba su nombre...">
+            <br>
+            <label for="apellido">Apellido</label>
+            <input type="text"id="apellido" name="apellido" placeholder="Escriba su apellido...">
+            <br>
+            <label for="comentario">Comentario </label>
+            <textarea cols="50" rows="10" id="comentario" placeholder="Ingrese cometario..." name="comentario"></textarea>
+            <br>
+            <!-- Las ventajas que tiene usar la etiqueta <button> es que dentro de ésta podemos utilizar más etiquetas
+                HTML por lo que podemos dar un mejor formato o personalización a nuestros botones.
+            Los tipos de botones son los siguientes:
+                -submit -> Valor que toma por defecto el botón, su comportamiento es el de enviar los datos del formulario
+                -button -> Botón simple en el que tienes que especificar su comportamiento con JS
+                -reset  -> Deja al formulario con sus valores iniciales 
+            --> 
+            <button type="submit">Tipo submit</button>
+            <button type="button">Tipo button</button>
+            <button type="reset">Tipo reset</button>
+        </form>
+        <h1>Login</h1>
+        <h2>Página principal</h2>
+        <h3>Ventas</h3>
+        <h4>Mi cuarto heading</h4>
+        <h5>Mi quinto heading</h5>
+        <h6>Mi sexto heading</h6>  
+        <p>Hola Mundo</p>
+        <hr>
+        <h2>Subtema</h2>
+        <p>
+           Este texto es <span style="color:blue">mucho más largo</span><br>
+           y es para la etiqueta span.
+        </p>
+        <a target="_blank"href="https://google.com">Ir a google</a><br>
+
+        <!--La etiqueta de width por defecto mantiene el mismo height que ponemos
+            dentro de width, es decir si ponemos 400, se pondrá ese mismo height-->
+        <img src="coffee.png" width="400" height="400"/> 
+
+    </body>
+    </html>    
